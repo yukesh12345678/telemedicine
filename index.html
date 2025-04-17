@@ -1,0 +1,314 @@
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="script.js>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediConnect - Telemedicine Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Medi<span>Connect</span></a>
+            
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#appointments">Appointments</a>
+                <a href="#about">About</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+            
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="container">
+            <div class="content">
+                <h3>Healthcare at Your Fingertips</h3>
+                <p>Connect with licensed healthcare providers from the comfort of your home. Available 24/7 for all your medical needs.</p>
+                <a href="#appointments" class="btn btn-primary">Book Now <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Doctor consultation">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h1 class="heading">Our <span>Services</span></h1>
+        
+        <div class="box-container container">
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>General Consultation</h3>
+                <p>Consult with doctors for common illnesses, prescriptions, and medical advice.</p>
+            </div>
+            
+            <div class="box">
+                <i class="fas fa-mental-health"></i>
+                <h3>Mental Health</h3>
+                <p>Confidential therapy and counseling with licensed mental health professionals.</p>
+            </div>
+            
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Chronic Care</h3>
+                <p>Management for diabetes, hypertension, and other chronic conditions.</p>
+            </div>
+            
+            <div class="box">
+                <i class="fas fa-pills"></i>
+                <h3>E-Prescriptions</h3>
+                <p>Get prescriptions sent directly to your pharmacy of choice.</p>
+            </div>
+            
+            <div class="box">
+                <i class="fas fa-procedures"></i>
+                <h3>Specialist Referrals</h3>
+                <p>Get referred to specialists when needed.</p>
+            </div>
+            
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>Medical Records</h3>
+                <p>Secure access to your health records and visit history.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors">
+        <h1 class="heading">Our <span>Doctors</span></h1>
+        
+        <div class="box-container container" id="doctors-container">
+            <!-- Doctors will be loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment" id="appointments">
+        <h1 class="heading">Book an <span>Appointment</span></h1>
+        
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Appointment booking">
+                </div>
+                
+                <form id="appointment-form">
+                    <h3>Schedule Your Visit</h3>
+                    
+                    <div class="inputBox">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Your phone" required>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your email" required>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor-select" required>
+                            <option value="">Choose a doctor</option>
+                            <!-- Will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="date">Appointment Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="time">Appointment Time</label>
+                        <input type="time" id="time" required>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <label for="reason">Reason for Visit</label>
+                        <textarea id="reason" cols="30" rows="5" placeholder="Briefly describe your symptoms"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <h1 class="heading">Patient <span>Reviews</span></h1>
+        
+        <div class="box-container container">
+            <div class="box">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patient">
+                <h3>Sarah Johnson</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"The convenience of seeing a doctor from home is amazing. The video quality was excellent and the doctor was very thorough."</p>
+            </div>
+            
+            <div class="box">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Patient">
+                <h3>Michael Chen</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"I was able to get a same-day appointment for my son who had a high fever. The pediatrician was wonderful and called in medication right away."</p>
+            </div>
+            
+            <div class="box">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient">
+                <h3>Emily Rodriguez</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"As someone with social anxiety, being able to talk to a therapist from home has been life-changing. Highly recommend!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="#services"><i class="fas fa-chevron-right"></i> Services</a>
+                <a href="#doctors"><i class="fas fa-chevron-right"></i> Doctors</a>
+                <a href="#appointments"><i class="fas fa-chevron-right"></i> Appointments</a>
+                <a href="#reviews"><i class="fas fa-chevron-right"></i> Reviews</a>
+            </div>
+            
+            <div class="box">
+                <h3>Our Services</h3>
+                <a href="#"><i class="fas fa-chevron-right"></i> General Consultation</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Mental Health</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Chronic Care</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> E-Prescriptions</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Specialist Referrals</a>
+            </div>
+            
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"><i class="fas fa-phone"></i> +1 (800) 555-1234</a>
+                <a href="#"><i class="fas fa-envelope"></i> support@mediconnect.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Suite 100, San Francisco, CA 94102</a>
+            </div>
+            
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        
+        <div class="credit"> &copy; 2023 <span>MediConnect</span> | All Rights Reserved </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="inputBox">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="inputBox">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <div class="inputBox">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="inputBox">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="inputBox">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="inputBox">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="inputBox">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Appointment Confirmation Modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Appointment Booked!</h2>
+                <p id="confirmation-details"></p>
+                <button class="btn btn-primary" id="close-confirmation">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<link rel="stylesheet" href="styles.css">
